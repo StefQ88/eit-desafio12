@@ -1,7 +1,6 @@
 
 body {
   margin: 40px 0;
-  padding: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
@@ -22,24 +21,25 @@ body {
 
 .container {
   display: flex;
-  max-width: 1280px; 
+  flex-wrap: wrap;
+  max-width: 1100px; 
+  min-width: 900px;
+  width: 90%;
   min-height: 580px;  
   margin: 0 auto;
-  width: 100%;
   padding: 1rem;
   background-color: #2B2738;
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
-
   align-items: stretch;
 }
 
 .left-panel,
 .panel-right {
-  width: 50%;             
-  min-width: 490px;       
+  flex: 1 1 300px;  
+  min-width: 0;      
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,11 +54,10 @@ body {
 }
 
 .left-panel h1 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;  
+  overflow: visible; 
   font-size: 2rem;
-  max-width: 90%; /* ajustable */
+  max-width: 100%; 
 }
 
 .panel-right {
@@ -75,7 +74,6 @@ form {
   gap: 2rem;
   width: 100%;
   margin: 0 auto;
-  height: auto;
 }
 
 
@@ -122,7 +120,6 @@ button:hover {
   text-align: center;
   min-height: 40px;
   line-height: 20px;
-  margin: 1rem;
   padding: 1rem;
 
   display: flex;
